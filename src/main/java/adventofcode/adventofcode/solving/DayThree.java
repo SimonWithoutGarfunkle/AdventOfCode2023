@@ -28,6 +28,7 @@ public class DayThree {
     }
 
     // Premiere etape On additionne tous les nombres de la matrice sans prendre en compte les symboles
+    // Juste pour voir si on arrive a parcourir et lire la matrice
     public int checkMatrixWithoutSymbol(char[][] matrix) {
         int result=0;
         String partResult="";
@@ -51,6 +52,7 @@ public class DayThree {
         return result;
     }
 
+    // Solution du puzzle 1
     public int checkMatrix(char[][] matrix) {
         int result=0;
         String partResult="";
@@ -58,18 +60,20 @@ public class DayThree {
 
         for (int i =0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                int partResultSize=0;
                 if (Character.isDigit(matrix[i][j])) {
                     while (j < matrix[i].length && Character.isDigit(matrix[i][j])) {
+                        // On vérifie la validité de chaque chiffre qui compose le nombre
                         check += checkCase(matrix, i, j);
                         partResult += matrix[i][j];
                         j++;
                     }
                 }
+                // Si un seul chiffre est valide tout le nombre est valide
                 if (check>0) {
                     result += Integer.parseInt(partResult);
 
                 }
+                // On réinitialise les compteurs avant de passer a la boucle suivante
                 check=0;
                 partResult="";
             }
@@ -77,6 +81,7 @@ public class DayThree {
         return result;
     }
 
+    // On test si la case est valide
     public int checkCase (char[][] matrix, int i, int j) {
         int compteur=0;
         for (int xpart=-1; xpart<2 ; xpart++) {
