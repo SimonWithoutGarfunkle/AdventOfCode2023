@@ -2,6 +2,7 @@ package adventofcode.adventofcode;
 
 import adventofcode.adventofcode.service.InputExtractor;
 import adventofcode.adventofcode.solving.DayOne;
+import adventofcode.adventofcode.solving.DayThree;
 import adventofcode.adventofcode.solving.DayTwo;
 import adventofcode.adventofcode.solving.Sample;
 import org.springframework.boot.SpringApplication;
@@ -17,15 +18,23 @@ public class AdventofcodeApplication {
 		SpringApplication.run(AdventofcodeApplication.class, args);
 
 		InputExtractor extractor = new InputExtractor();
-		List<String> input = extractor.extractFileToList("src/main/resources/inputs/day2input1.txt");
+		List<String> input = extractor.extractFileToList("src/main/resources/inputs/day3input1.txt");
 
-		System.out.println("Liste de éléments : "+input.size());
-		System.out.println("premier mot :"+input.get(0));
+		System.out.println("La liste contient : "+input.size()+" éléments");
+		System.out.println("premiere ligne :"+input.get(0));
 
-		DayTwo victory= new DayTwo();
-		System.out.println(victory.solution1(input));
 
-		System.out.println(victory.solution2(input));
+		/****************************************************
+		 ****************************************************
+		 ****************  Lets get to it   *****************
+		 ****************************************************
+		 ****************************************************/
+
+		DayThree victory = new DayThree();
+		victory.showMatrix(victory.generateMatrix(input));
+		System.out.println("la somme des nombres est :"+victory.checkMatrix(victory.generateMatrix(input)));
+
+
 
 
 
