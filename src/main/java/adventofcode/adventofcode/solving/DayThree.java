@@ -27,8 +27,41 @@ public class DayThree {
         }
     }
 
+    public void solvingPuzzle2(char[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j]=='*') {
+                    System.out.println("l'etoile en "+(i+1)+"/"+(j+1)+" a un score de : "+checkCaseAsterisk(matrix, i, j));
+                }
+
+            }
+        }
+
+    }
+
+    // On test si la case est valide pour le puzzle 2
+    // Pour etre valide il faut un score de exactement 2
+    public boolean checkCaseAsterisk (char[][] matrix, int i, int j) {
+        int compteur=0;
+        for (int xpart=-1; xpart<2 ; xpart++) {
+            for (int ypart=-1; ypart<2; ypart++) {
+                try {
+                    //Si c'est ni un chiffre, ni un point c'est un symbole
+                    if (Character.isDigit(matrix[i + xpart][j + ypart]))  {
+                        compteur++;
+                        while (Character.isDigit(matrix[i + xpart][j + ypart+1])) {
+                            ypart++;
+                        }
+
+                    }
+                } catch (ArrayIndexOutOfBoundsException e) {}
+            }
+        }
+        return compteur == 2;
+    }
+
     // Premiere etape On additionne tous les nombres de la matrice sans prendre en compte les symboles
-    // Juste pour voir si on arrive a parcourir et lire la matrice
+    // Juste pour voir si on arrive a parcourir et lire la matrice, pas necessaire pour le puzzle
     public int checkMatrixWithoutSymbol(char[][] matrix) {
         int result=0;
         String partResult="";
@@ -81,7 +114,7 @@ public class DayThree {
         return result;
     }
 
-    // On test si la case est valide
+    // On test si la case est valide pour le puzzle 1
     public int checkCase (char[][] matrix, int i, int j) {
         int compteur=0;
         for (int xpart=-1; xpart<2 ; xpart++) {
