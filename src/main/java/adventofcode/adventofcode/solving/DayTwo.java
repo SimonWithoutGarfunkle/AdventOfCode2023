@@ -46,8 +46,7 @@ public class DayTwo {
     }
 
     public String[] readLine(String string) {
-        String[] parts = string.split("[:,;]");
-        return parts;
+        return string.split("[:,;]");
     }
 
     public Game convertArrayToGame(String[] array) {
