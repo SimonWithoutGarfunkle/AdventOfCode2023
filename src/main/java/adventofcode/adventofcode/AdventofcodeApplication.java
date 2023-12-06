@@ -3,6 +3,7 @@ package adventofcode.adventofcode;
 import adventofcode.adventofcode.service.InputExtractor;
 import adventofcode.adventofcode.solving.DayFive;
 import adventofcode.adventofcode.solving.DayFour;
+import adventofcode.adventofcode.solving.DaySix;
 import adventofcode.adventofcode.solving.DayThree;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,7 +17,7 @@ public class AdventofcodeApplication {
 		SpringApplication.run(AdventofcodeApplication.class, args);
 
 		InputExtractor extractor = new InputExtractor();
-		List<String> input = extractor.extractFileToList("src/main/resources/inputs/day5input1.txt");
+		List<String> input = extractor.extractFileToList("src/main/resources/inputs/day6input1.txt");
 
 		System.out.println("La liste contient : "+input.size()+" éléments");
 		System.out.println("premiere ligne :"+input.get(0));
@@ -27,8 +28,9 @@ public class AdventofcodeApplication {
 		 ****************************************************
 		 ****************************************************/
 
-		DayFive victory = new DayFive(input);
-		System.out.println(victory.solvingPuzzle2());
+		DaySix victory = new DaySix(input);
+		System.out.println(victory.puzzle2());
+
 
 	}
 
