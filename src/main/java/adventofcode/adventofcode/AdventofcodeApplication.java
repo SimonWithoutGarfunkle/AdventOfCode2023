@@ -14,7 +14,7 @@ public class AdventofcodeApplication {
 		SpringApplication.run(AdventofcodeApplication.class, args);
 
 		InputExtractor extractor = new InputExtractor();
-		List<String> input = extractor.extractFileToList("src/main/resources/inputs/day9input1.txt");
+		List<String> input = extractor.extractFileToList("src/main/resources/inputs/day10input1.txt");
 
 		System.out.println("La liste contient : "+input.size()+" éléments");
 		System.out.println("premiere ligne :"+input.get(0));
@@ -25,8 +25,10 @@ public class AdventofcodeApplication {
 		 ****************************************************
 		 ****************************************************/
 
-		DayNine victory = new DayNine(input);
-		victory.puzzle2();
+		DayTen victory = new DayTen(input);
+		victory.puzzle1();
+
+
 
 	}
 
