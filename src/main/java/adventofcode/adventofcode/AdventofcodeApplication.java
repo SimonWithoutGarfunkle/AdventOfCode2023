@@ -1,7 +1,7 @@
 package adventofcode.adventofcode;
 
 import adventofcode.adventofcode.service.InputExtractor;
-import adventofcode.adventofcode.solving.DayOne;
+import adventofcode.adventofcode.solving.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -14,21 +14,21 @@ public class AdventofcodeApplication {
 		SpringApplication.run(AdventofcodeApplication.class, args);
 
 		InputExtractor extractor = new InputExtractor();
-		List<String> input = extractor.extractFileToList("src/main/resources/inputs/day1input2.txt");
+		List<String> input = extractor.extractFileToList("src/main/resources/inputs/day11input1.txt");
 
-		System.out.println("Liste de éléments : "+input.size());
-		System.out.println("premier mot :"+input.get(0));
+		System.out.println("La liste contient : "+input.size()+" éléments");
+		System.out.println("premiere ligne :"+input.get(0));
 
+		/****************************************************
+		 ****************************************************
+		 ****************  Lets get to it   *****************
+		 ****************************************************
+		 ****************************************************/
 
-
-		DayOne victory = new DayOne();
-		System.out.println("la réponse est "+victory.firstTest(input));
+		DayEleven victory = new DayEleven(input);
+		victory.puzzle2();
 
 
 	}
-
-
-
-
 
 }
