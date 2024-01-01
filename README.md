@@ -9,7 +9,7 @@ Je créé une branche par jour. J'essaie de commenter pour que ce soit compréhe
  - Le day 1 je ne pensais pas partager sur Git donc le code est sale il ne faut pas regarder :D
  - Le day 3 je n'ai pas eu le temps de finir
  - Le day 10 - question 2 : je n'ai pas trouvé comment m'y prendre
- - J'ai fait 1 semaine de pause à partir du day 11, je vais essayer de rattraper mon retard, aujourd'hui le 19 j'ai fait le day 11
+ - j'ai arreté de le faire quotidiennement au day 11. Avec la difficulté croissante et la formation à finir, je n'avais plus le temps. Je vais essayer de rattraper mon retard progressivement
 
 <br><br><br>
 Des remarques ? Des questions ? N'hésitez pas : <a href="https://www.linkedin.com/in/simon-lefort-6a58a482/" target="_blank">Contactez-moi</a>
