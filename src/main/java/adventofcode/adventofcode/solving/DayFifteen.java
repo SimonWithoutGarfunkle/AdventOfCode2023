@@ -20,7 +20,7 @@ public class DayFifteen {
     public void puzzle1() {
         System.out.println("And the answer is ... -->  "+inputs.stream().mapToInt(this::hashString).sum());
     }
-    
+
     //Je stock les box dans une HashMap avec en clé le n° de la box et en valeur son contenu
     public void puzzle2() {
         HashMap<Integer, List<String>> map = new HashMap<>();
